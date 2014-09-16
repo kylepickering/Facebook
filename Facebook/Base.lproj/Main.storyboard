@@ -59,8 +59,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1203"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hB4-aa-r1A">
-                                        <rect key="frame" x="20" y="356" width="64" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hB4-aa-r1A">
+                                        <rect key="frame" x="20" y="357" width="64" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -71,13 +71,33 @@
                                         <state key="selected" title="Unlike" image="like_btn_selected">
                                             <color key="titleColor" red="0.1098039299" green="0.52156865600000002" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTap:" destination="iCN-ml-aGG" eventType="touchUpInside" id="Js4-TA-xfY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_bar" id="xva-gJ-fCG">
-                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                            <view contentMode="scaleToFill" id="YeN-Wd-Bdp">
+                                <rect key="frame" x="-20" y="475" width="360" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_bar" id="xva-gJ-fCG">
+                                        <rect key="frame" x="20" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="XT5-0m-clA">
+                                        <rect key="frame" x="63" y="7" width="212" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="tapText2:" destination="iCN-ml-aGG" eventType="touchDown" id="Dhr-ud-h3n"/>
+                                            <action selector="tapTextField:" destination="iCN-ml-aGG" eventType="touchUpInside" id="AEW-C0-BEM"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -88,11 +108,42 @@
                     <connections>
                         <outlet property="ThrillImage" destination="Edd-iM-ZT2" id="dgt-66-vpw"/>
                         <outlet property="ThrillScroll" destination="8my-sf-hTV" id="IFR-ED-i11"/>
+                        <outlet property="likeButton" destination="hB4-aa-r1A" id="Y3n-Jc-Ojm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwC-9c-QGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117" y="2067"/>
+        </scene>
+        <!--Create Status View Controller-->
+        <scene sceneID="FRx-3s-eoL">
+            <objects>
+                <viewController id="5tl-BJ-2WM" customClass="CreateStatusViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jME-aQ-mlf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AOY-gv-gTh">
+                                <rect key="frame" x="10" y="27" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCancel:" destination="5tl-BJ-2WM" eventType="touchUpInside" id="NvQ-D0-Pdh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_status" id="g39-dS-bWE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1H-4z-XbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="566"/>
         </scene>
         <!--Home Feed View Controller-->
         <scene sceneID="xei-6X-GAV">
@@ -130,6 +181,36 @@
                                     </button>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5sF-nu-6M1" userLabel="StatusButton">
+                                <rect key="frame" x="0.0" y="63" width="107" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5tl-BJ-2WM" kind="modal" modalTransitionStyle="coverVertical" id="xKX-hc-DlP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rFG-ry-ON3" userLabel="PhotoButton">
+                                <rect key="frame" x="107" y="63" width="107" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9qc-ne-AIf" kind="modal" modalTransitionStyle="coverVertical" id="6kt-e2-l6L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zdC-6j-W8H" userLabel="CheckInButton">
+                                <rect key="frame" x="213" y="63" width="107" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ROT-sK-2cN" kind="modal" modalTransitionStyle="coverVertical" id="njw-vl-fK3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.37254902719999999" green="0.67058825489999996" blue="0.90980398650000005" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -368,10 +449,86 @@
             </objects>
             <point key="canvasLocation" x="1964" y="-138"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="h91-zN-ZxA">
+            <objects>
+                <viewController id="cCm-6w-d5T" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yIm-Ji-Ag4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANv-A7-lKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Create Status View Controller-->
+        <scene sceneID="19Z-Su-oHB">
+            <objects>
+                <viewController id="9qc-ne-AIf" customClass="CreateStatusViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXl-ag-RmL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PIs-ok-dsz">
+                                <rect key="frame" x="10" y="27" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCancel:" destination="9qc-ne-AIf" eventType="touchUpInside" id="ceh-QJ-vQl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_photo" id="I1Z-ky-yIw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epL-JF-Tgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="1600"/>
+        </scene>
+        <!--Create Status View Controller-->
+        <scene sceneID="Ulp-MV-dkU">
+            <objects>
+                <viewController id="ROT-sK-2cN" customClass="CreateStatusViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1k5-bQ-N3v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WQk-25-cDs">
+                                <rect key="frame" x="10" y="27" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCancel:" destination="ROT-sK-2cN" eventType="touchUpInside" id="gVd-FH-4KD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_checkin" id="x4g-62-c8m">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zT-rJ-TaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-619" y="1211"/>
+        </scene>
     </scenes>
     <resources>
         <image name="comment_bar" width="320" height="44"/>
         <image name="compose" width="320" height="46"/>
+        <image name="create_checkin" width="320" height="568"/>
+        <image name="create_photo" width="320" height="568"/>
+        <image name="create_status" width="320" height="568"/>
         <image name="feed_tab" width="27" height="27"/>
         <image name="home_feed" width="320" height="1025"/>
         <image name="like_btn" width="17" height="40"/>

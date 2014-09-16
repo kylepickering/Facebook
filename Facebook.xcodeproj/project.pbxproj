@@ -18,6 +18,7 @@
 		270D0C4519C7E2B7003922CA /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4419C7E2B7003922CA /* NotificationsViewController.swift */; };
 		270D0C4719C7E46B003922CA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4619C7E46B003922CA /* MoreViewController.swift */; };
 		270D0C4919C7E740003922CA /* ThrilDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4819C7E740003922CA /* ThrilDetailViewController.swift */; };
+		270D0C4B19C7EE9B003922CA /* CreateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4A19C7EE9B003922CA /* CreateStatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		270D0C4419C7E2B7003922CA /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		270D0C4619C7E46B003922CA /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		270D0C4819C7E740003922CA /* ThrilDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrilDetailViewController.swift; sourceTree = "<group>"; };
+		270D0C4A19C7EE9B003922CA /* CreateStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateStatusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		270D0C1319C7DBBB003922CA = {
 			isa = PBXGroup;
 			children = (
+				270D0C4A19C7EE9B003922CA /* CreateStatusViewController.swift */,
 				270D0C1E19C7DBBB003922CA /* Facebook */,
 				270D0C3119C7DBBC003922CA /* FacebookTests */,
 				270D0C1D19C7DBBB003922CA /* Products */,
@@ -231,6 +234,7 @@
 				270D0C2419C7DBBB003922CA /* ViewController.swift in Sources */,
 				270D0C2219C7DBBB003922CA /* AppDelegate.swift in Sources */,
 				270D0C4519C7E2B7003922CA /* NotificationsViewController.swift in Sources */,
+				270D0C4B19C7EE9B003922CA /* CreateStatusViewController.swift in Sources */,
 				270D0C4119C7E19C003922CA /* RequestsViewController.swift in Sources */,
 				270D0C3F19C7DFCA003922CA /* HomeFeedViewController.swift in Sources */,
 				270D0C4919C7E740003922CA /* ThrilDetailViewController.swift in Sources */,

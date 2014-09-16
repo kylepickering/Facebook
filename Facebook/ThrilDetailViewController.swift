@@ -10,8 +10,10 @@ import UIKit
 
 class ThrilDetailViewController: UIViewController {
 
+    @IBOutlet weak var TextFieldView: UIView!
     @IBOutlet weak var ThrillScroll: UIScrollView!
     
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var ThrillImage: UIImageView!
     
     override func viewDidLoad() {
@@ -27,6 +29,31 @@ class ThrilDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func tapTextField(sender: AnyObject) {
+        
+        
+    }
+    
+    @IBAction func tapText2(sender: AnyObject) {
+        UIView.animateWithDuration(0.4, animations: {
+            var TextFieldFrame
+            = self.TextFieldView;
+            TextFieldFrame.origin.y -= 200;
+            self.TextFieldView.frame = TextFieldFrame;
+            
+        })
+
+    }
+    
+    
+    @IBAction func onTap(sender: AnyObject) {
+        if likeButton.selected == false {
+            likeButton.selected = true
+        } else {
+            likeButton.selected = false
+        }
+        
+    }
 
     /*
     // MARK: - Navigation
