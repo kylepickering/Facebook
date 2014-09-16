@@ -12,6 +12,12 @@
 		270D0C2719C7DBBB003922CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270D0C2519C7DBBB003922CA /* Main.storyboard */; };
 		270D0C2919C7DBBB003922CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270D0C2819C7DBBB003922CA /* Images.xcassets */; };
 		270D0C3519C7DBBC003922CA /* FacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C3419C7DBBC003922CA /* FacebookTests.swift */; };
+		270D0C3F19C7DFCA003922CA /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C3E19C7DFCA003922CA /* HomeFeedViewController.swift */; };
+		270D0C4119C7E19C003922CA /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4019C7E19C003922CA /* RequestsViewController.swift */; };
+		270D0C4319C7E213003922CA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4219C7E213003922CA /* MessagesViewController.swift */; };
+		270D0C4519C7E2B7003922CA /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4419C7E2B7003922CA /* NotificationsViewController.swift */; };
+		270D0C4719C7E46B003922CA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4619C7E46B003922CA /* MoreViewController.swift */; };
+		270D0C4919C7E740003922CA /* ThrilDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0C4819C7E740003922CA /* ThrilDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,12 @@
 		270D0C2E19C7DBBB003922CA /* FacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		270D0C3319C7DBBC003922CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270D0C3419C7DBBC003922CA /* FacebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookTests.swift; sourceTree = "<group>"; };
+		270D0C3E19C7DFCA003922CA /* HomeFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		270D0C4019C7E19C003922CA /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
+		270D0C4219C7E213003922CA /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		270D0C4419C7E2B7003922CA /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		270D0C4619C7E46B003922CA /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		270D0C4819C7E740003922CA /* ThrilDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrilDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,12 @@
 				270D0C2119C7DBBB003922CA /* AppDelegate.swift */,
 				270D0C2319C7DBBB003922CA /* ViewController.swift */,
 				270D0C2519C7DBBB003922CA /* Main.storyboard */,
+				270D0C4419C7E2B7003922CA /* NotificationsViewController.swift */,
+				270D0C4619C7E46B003922CA /* MoreViewController.swift */,
+				270D0C4819C7E740003922CA /* ThrilDetailViewController.swift */,
+				270D0C3E19C7DFCA003922CA /* HomeFeedViewController.swift */,
+				270D0C4019C7E19C003922CA /* RequestsViewController.swift */,
+				270D0C4219C7E213003922CA /* MessagesViewController.swift */,
 				270D0C2819C7DBBB003922CA /* Images.xcassets */,
 				270D0C1F19C7DBBB003922CA /* Supporting Files */,
 			);
@@ -208,8 +226,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270D0C4719C7E46B003922CA /* MoreViewController.swift in Sources */,
+				270D0C4319C7E213003922CA /* MessagesViewController.swift in Sources */,
 				270D0C2419C7DBBB003922CA /* ViewController.swift in Sources */,
 				270D0C2219C7DBBB003922CA /* AppDelegate.swift in Sources */,
+				270D0C4519C7E2B7003922CA /* NotificationsViewController.swift in Sources */,
+				270D0C4119C7E19C003922CA /* RequestsViewController.swift in Sources */,
+				270D0C3F19C7DFCA003922CA /* HomeFeedViewController.swift in Sources */,
+				270D0C4919C7E740003922CA /* ThrilDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
