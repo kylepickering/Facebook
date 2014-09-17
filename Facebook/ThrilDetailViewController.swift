@@ -38,14 +38,14 @@ class ThrilDetailViewController: UIViewController {
     }
     
     @IBAction func tapText2(sender: AnyObject) {
-        /*UIView.animateWithDuration(0.5, delay: 0, options: 0, animations: {
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
             var textFieldFrame = self.TextField.frame
             textFieldFrame.origin.y -= 165
             self.TextField.frame = textFieldFrame
 
         }, completion: { finished in
             
-        })*/
+        })
     }
     
     
@@ -61,9 +61,6 @@ class ThrilDetailViewController: UIViewController {
     @IBAction func onTapView(sender: AnyObject) {
         view.endEditing(true)
         
-        
-
-        
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
             var textFieldFrame = self.TextField.frame
             textFieldFrame.origin.y += 165
@@ -75,13 +72,6 @@ class ThrilDetailViewController: UIViewController {
     }
     
 
-    
-    func keyboardWillShow(aNotification: NSNotification) {
-        let duration = aNotification.userInfo!.objectForKey(UIKeyboardAnimationDurationUserInfoKey) as Double
-
-        let curve = aNotification.userInfo!.objectForKey(UIKeyboardAnimationCurveUserInfoKey) as UInt
-        
-    }
     /*
     // MARK: - Navigation
 
