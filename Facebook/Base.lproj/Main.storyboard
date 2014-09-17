@@ -58,6 +58,10 @@
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thrillist_detail" id="Edd-iM-ZT2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1203"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="DWI-Jv-x6f" appends="YES" id="pR0-pg-mGv"/>
+                                        </connections>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hB4-aa-r1A">
                                         <rect key="frame" x="20" y="357" width="64" height="40"/>
@@ -76,6 +80,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DWI-Jv-x6f" appends="YES" id="b52-VU-Fn1"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" id="YeN-Wd-Bdp">
                                 <rect key="frame" x="-20" y="475" width="360" height="44"/>
@@ -89,7 +97,7 @@
                                         <rect key="frame" x="63" y="7" width="212" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
                                             <action selector="tapText2:" destination="iCN-ml-aGG" eventType="touchDown" id="Dhr-ud-h3n"/>
                                             <action selector="tapTextField:" destination="iCN-ml-aGG" eventType="touchUpInside" id="AEW-C0-BEM"/>
@@ -106,12 +114,18 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="TextField" destination="YeN-Wd-Bdp" id="e4b-Vx-Q6K"/>
                         <outlet property="ThrillImage" destination="Edd-iM-ZT2" id="dgt-66-vpw"/>
                         <outlet property="ThrillScroll" destination="8my-sf-hTV" id="IFR-ED-i11"/>
                         <outlet property="likeButton" destination="hB4-aa-r1A" id="Y3n-Jc-Ojm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwC-9c-QGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DWI-Jv-x6f">
+                    <connections>
+                        <action selector="onTapView:" destination="iCN-ml-aGG" id="AXe-Vl-gwE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117" y="2067"/>
         </scene>

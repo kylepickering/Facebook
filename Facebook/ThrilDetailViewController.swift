@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Foundation
 
 class ThrilDetailViewController: UIViewController {
 
     @IBOutlet weak var TextFieldView: UIView!
     @IBOutlet weak var ThrillScroll: UIScrollView!
     
+    @IBOutlet weak var TextField: UIView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var ThrillImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +38,14 @@ class ThrilDetailViewController: UIViewController {
     }
     
     @IBAction func tapText2(sender: AnyObject) {
-        UIView.animateWithDuration(0.4, animations: {
-            var TextFieldFrame
-            = self.TextFieldView;
-            TextFieldFrame.origin.y -= 200;
-            self.TextFieldView.frame = TextFieldFrame;
-            
-        })
+        /*UIView.animateWithDuration(0.5, delay: 0, options: 0, animations: {
+            var textFieldFrame = self.TextField.frame
+            textFieldFrame.origin.y -= 165
+            self.TextField.frame = textFieldFrame
 
+        }, completion: { finished in
+            
+        })*/
     }
     
     
@@ -55,6 +58,30 @@ class ThrilDetailViewController: UIViewController {
         
     }
 
+    @IBAction func onTapView(sender: AnyObject) {
+        view.endEditing(true)
+        
+        
+
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            var textFieldFrame = self.TextField.frame
+            textFieldFrame.origin.y += 165
+            self.TextField.frame = textFieldFrame
+            
+            }, completion: { finished in
+                
+        })
+    }
+    
+
+    
+    func keyboardWillShow(aNotification: NSNotification) {
+        let duration = aNotification.userInfo!.objectForKey(UIKeyboardAnimationDurationUserInfoKey) as Double
+
+        let curve = aNotification.userInfo!.objectForKey(UIKeyboardAnimationCurveUserInfoKey) as UInt
+        
+    }
     /*
     // MARK: - Navigation
 
